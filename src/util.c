@@ -983,6 +983,7 @@ void getRandomHexChars(char *p, size_t len) {
  * case of one or more "../" appearing at the start of "filename"
  * relative path. */
 sds getAbsolutePath(char *filename) {
+    return filename;
     char cwd[1024];
     sds abspath;
     sds relpath = sdsnew(filename);
