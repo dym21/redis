@@ -7071,7 +7071,7 @@ int main(int argc, char **argv) {
          * First argument is the config file name? */
         if (argv[1][0] != '-') {
             /* Replace the config file in server.exec_argv with its absolute path. */
-            server.configfile = getAbsolutePath(argv[1]);
+            server.configfile = argv[1];
             zfree(server.exec_argv[1]);
             server.exec_argv[1] = zstrdup(server.configfile);
             j = 2; // Skip this arg when parsing options
